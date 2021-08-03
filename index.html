@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shurb OP</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <style>
+    body{
+    text-align: center;
+    margin: 0;
+    font-family: 'lucida handwriting', cursive;
+    background: linear-gradient(rgb(12, 133, 214) 0%, darkblue 100%);
+    opacity: 1;
+    height: 800px;
+    color: rgb(222, 228, 222);
+    }
+    </style>
+    <center>
+        <div class="container">
+            <br> <br>
+        <h1>Shurb olleh</h1>
+        <br> <br> <br>
+        <input id="english" placeholder="English here" class="form-control">
+        <br> <br>
+        <button style="width: 200px;" onclick="lolz()"; class="btn btn-primary">Translate</button>
+        <br> <br> <br> <br>
+        <h1>The Result: </h1> <h1 id="result"></h1>
+        </div>
+    </center>
+    <script>
+        
+       
+        function lolz() {
+            var idk = document.getElementById("english").value;
+            function reverseInPlace(str) {
+        var words = [];
+        words = str.split("\s+");
+        var result = "";
+        for (var i = 0; i < words.length; i++) {
+            return result += words[i].split('').reverse().join('');
+        }
+    }
+    document.getElementById("result").innerHTML = reverseInPlace(idk)
+        }
+        
+    </script>
+</body>
+</html>
