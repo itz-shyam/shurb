@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shurb OP</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -16,7 +19,7 @@
     body{
     text-align: center;
     margin: 0;
-    font-family: 'lucida handwriting', cursive;
+    font-family:'Poppins';
     background: linear-gradient(rgb(12, 133, 214) 0%, darkblue 100%);
     opacity: 1;
     height: 800px;
@@ -26,13 +29,14 @@
     <center>
         <div class="container">
             <br> <br>
-        <h1>Shurb olleh</h1>
+        <h1>Hello Bruhs!</h1>
         <br> <br> <br>
         <input id="english" placeholder="English here" class="form-control">
         <br> <br>
-        <button style="width: 200px;" onclick="lolz()"; class="btn btn-primary">Translate</button>
+        <button style="width: 200px;" onclick="lolz();" class="btn btn-primary">Translate</button>
         <br> <br> <br> <br>
         <h1>The Result: </h1> <h1 id="result"></h1>
+        <button style="width: 250px; font-family" onclick="copycat();" class="btn btn-info">Copy The Result</button>
         </div>
     </center>
     <script>
@@ -48,9 +52,24 @@
             return result += words[i].split('').reverse().join('');
         }
     }
-    document.getElementById("result").innerHTML = reverseInPlace(idk)
+    document.getElementById("result").innerHTML = reverseInPlace(idk);
         }
         
+        window.addEventListener("keydown",keydown)
+    function keydown(e) {
+        if (e.keyCode == 13) {
+            var idk = document.getElementById("english").value;
+            function reverseInPlace(str) {
+        var words = [];
+        words = str.split("\s+");
+        var result = "";
+        for (var i = 0; i < words.length; i++) {
+            return result += words[i].split('').reverse().join('');
+        }
+    }
+        document.getElementById("result").innerHTML = reverseInPlace(idk);   
+        }
+}
     </script>
 </body>
 </html>
